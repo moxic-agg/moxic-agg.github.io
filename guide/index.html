@@ -1,1 +1,155 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GW2 Agg on GitHub Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .step {
+            background-color: #333;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .step:hover {
+            background-color: #444;
+        }
+        .step h2 {
+            margin: 0;
+            padding: 10px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            text-align: left;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+        a:visited {
+            color: #a070ff;
+        }
+    </style>
+    <script>
+        function toggleStep(event) {
+            const content = event.currentTarget.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>GW2 Agg on GitHub Guide</h1>
+        
+        <div class="step" onclick="toggleStep(event)">
+            <h2>Step 1 - Create GitHub Account</h2>
+        </div>
+        <div class="content">
+            <p>Create a GitHub account here: <a href="https://github.com" target="_blank">github.com</a></p>
+        </div>
+        
+        <div class="step" onclick="toggleStep(event)">
+            <h2>Step 2 - Create New Organization</h2>
+        </div>
+        <div class="content">
+            <p>Once you are logged in, click on the &ldquo;+&rdquo; sign at the top and click on &ldquo;New Organization&rdquo;</p>
+            <p>(like the screenshot below)</p>
+            <p><img title="" src="images/image15.png" alt="" /></p>
+            <p>Then choose &ldquo;Create a free organization&rdquo;</p>
+            <p>Create an organization name and enter your email address.</p>
+            <p><img title="" src="images/image19.png" alt="" /></p>
+            <p>You can skip the next step.</p>
+            <p><img title="" src="images/image7.png" alt="" /></p>
+        </div>
+        
+        <div class="step" onclick="toggleStep(event)">
+            <h2>Step 3 - Create Repository</h2>
+        </div>
+        <div class="content">
+            <p>Next, we will create a repository.</p>
+            <p>On the right side, you should see this:</p>
+            <p><img title="" src="images/image4.png" alt="" /></p>
+            <p>Click on &ldquo;Create new repository&rdquo;</p>
+            <p>On the next screen, make the owner the organization you created and in the repository name, you can make it the org name followed by .github.io</p>
+            <p><img title="" src="images/image17.png" alt="" /></p>
+            <p>Change it to Public so others can load the agg (if needed). And create the repository. Keep the next page open as we will go back to it.</p>
+        </div>
+        
+        <div class="step" onclick="toggleStep(event)">
+            <h2>Step 4 - Upload a File to the Repository</h2>
+        </div>
+        <div class="content">
+            <p>Next you will need the index.html file, you can download the one here (which is the same as haro&rsquo;s), open this in a tab or window<br /><br /><a href="https://github.com/moxic-agg/moxic-agg.github.io/blob/main/index.html">https://github.com/moxic-agg/moxic-agg.github.io/blob/main/index.html</a></p>
+            <p><img title="" src="images/image11.png" alt="" /></p>
+            <p>Click on the arrow pointing down and it should download the file. (remember where you saved it)</p>
+            <p>Go back to the page that opened after you created the repository. On that page, you should see an option that says &ldquo;uploading an existing file&rdquo;</p>
+            <p><img title="" src="images/image5.png" alt="" /></p>
+            <p>Click on that and then either drag the index.html file you downloaded before into where it says, or click on &ldquo;choose your files&rdquo;</p>
+            <p>After that, click on &ldquo;Commit changes&rdquo;.</p>
+            <p>The next part may take a bit (usually not more than 30 seconds to a minute). To ensure it is done committing, you can click on this:</p>
+            <p><img title="" src="images/image12.png" alt="" /></p>
+            <p>Where it says # Commit, after you click on that, you will see any changes made to that file, like so:<br /><br /><img title="" src="images/image1.png" alt="" /></p>
+            <p>Once you see the check mark, it should be completed and you should be able to browse to the github.io address you, in this case: (open yours in a new tab or window)</p>
+            <p><a href="https://gw2dui-test.github.io">gw2dui-test.github.io</a></p>
+        </div>
+        
+        <div class="step" onclick="toggleStep(event)">
+            <h2>Step 5 - Saving the Agg</h2>
+        </div>
+        <div class="content">
+            <p>Next we need to get a OAUTH token to be able to save.</p>
+            <p>To do that, back on github. Go to your icon in the top right hand corner:</p>
+            <p><img title="" src="images/image14.png" alt="" /></p>
+            <p>Then go down to settings. On the left hand side towards the bottom click on Developer settings:</p>
+            <p><img title="" src="images/image10.png" alt="" /></p>
+            <p>Then click on &ldquo;Personal access tokens&rdquo; and then &ldquo;Tokens (classic)&rdquo;.</p>
+            <p><img title="" src="images/image13.png" alt="" /></p>
+            <p>Next click on &ldquo;Generate new token&rdquo;, then select the classic one.</p>
+            <p><img title="" src="images/image8.png" alt="" /></p>
+            <p>Add a note (if you want), and set the expiration to no expiration. That way you don&rsquo;t need to keep going back to refresh it and then check repo for the scope:</p>
+            <p><img title="" src="images/image2.png" alt="" /></p>
+            <p>After that, click on &ldquo;Generate token&rdquo; at the bottom.</p>
+            <p>Click on the two boxes there to copy it.</p>
+            <p><img title="" src="images/image6.png" alt="" /></p>
+            <p>Lets go back to the agg back, that we created (example: <a href="https://gw2dui-test.github.io">https://gw2dui-test.github.io/</a>)</p>
+            <p>Once we are there, lets check on the gear or cog icon on the right side here:</p>
+            <p><img title="" src="images/image16.png" alt="" /></p>
+            <p>Here is where you need to change a few settings:</p>
+            <p>Username you want to change to the org, the target repository to your repository</p>
+            <p>If you are not sure what you put, you can go back to your github and you should see in the top left hand corner, when you are in the repository</p>
+            <p><img title="" src="images/image20.png" alt="" /></p>
+            <p>With the token you created, you can paste that into the Password, OAUTH token, or personal access token field.</p>
+            <p><img title="" src="images/image3.png" alt="" /></p>
+            <p>Once that is done, you can click on the save icon (which is the circle in a circle icon) on the right hand side:</p>
+            <p><img title="" src="images/image9.png" alt="" /></p>
+            <p>If it worked, it should say it was &ldquo;saved wiki&rdquo;. And should change the icon to the following:</p>
+            <p><img title="" src="images/image18.png" alt="" /></p>
+        </div>
+    </div>
+</body>
+</html>
